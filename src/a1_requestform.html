@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JoyDrive</title>
+    <link rel="stylesheet" href="./output.css" />
+    <script
+      src="https://kit.fontawesome.com/90e2f1a3f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="bg-teal-900">
+      <nav class="relative container mx-auto bg-teal-900 p-6">
+        <!-- Flex container -->
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="">
+            <img src="img/joydrive_logo.jpg" alt="" class="h-10" />
+          </div>
+          <!-- Menu Items -->
+          <div class="hidden space-x-6 md:flex">
+            <a href="index.html" class="text-white hover:text-teal-500">Home</a>
+            <a href="index.html#vehicles" class="text-white hover:text-teal-500"
+              >Vehicles</a
+            >
+          </div>
+          <!-- Button -->
+          <a
+            href="index.html#vehicles"
+            class="hidden p-3 px-6 pt-2 text-white font-bold bg-teal-600 rounded-full baseline hover:bg-teal-500 md:block"
+            >Rent</a
+          >
+        </div>
+      </nav>
+    </div>
+
+    <!-- Request Form -->
+    <section id="requestfomr" class="">
+      <!-- Container to heading and vehicle blocks -->
+      <div class="max-w-7xl px-10 mx-auto my-10 py-5 space-y-5">
+        <!-- Heading ontainer -->
+        <div class="text-center">
+          <h3 class="text-1xl font-bold text-center">
+            Self-Drive CAR - get a free quotation!
+          </h3>
+          <h2 class="text-4xl font-bold text-center">Request Quotation Form</h2>
+          <h3 class="text-1xl font-bold text-center">
+            This is just a quotation request, not a final booking
+          </h3>
+        </div>
+        <!-- Form Container -->
+        <div class="">
+          <form class="max-w-sm mx-auto">
+            <div class="mb-5">
+              <label
+                for="pickupreturn"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Pick Up & Return Date</label
+              >
+              <div
+                id="date-range-picker"
+                date-rangepicker
+                class="flex items-center"
+              >
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    id="datepicker-range-start"
+                    name="start"
+                    type="text"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Select date start"
+                  />
+                </div>
+                <span class="mx-4 text-gray-500">to</span>
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    id="datepicker-range-end"
+                    name="end"
+                    type="text"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Select date end"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-5">
+              <label
+                for="vehicle"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Select Vehicle</label
+              >
+              <select
+                id="vehicle"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-600 dark:focus:border-teal-600"
+              >
+                <option>Toyota HiAce Commuter 15 Seater</option>
+                <option>Toyota Innova 5-7 Seater</option>
+              </select>
+            </div>
+
+            <div class="mb-5">
+              <label
+                for="name"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Your Name</label
+              >
+              <input
+                type="name"
+                id="name"
+                class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-600 dark:focus:border-teal-600 dark:shadow-xs-light"
+                placeholder="Juan Dela Cruz"
+                required
+              />
+            </div>
+
+            <div class="mb-5">
+              <label
+                for="email"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Your Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-600 dark:focus:border-teal-600 dark:shadow-xs-light"
+                placeholder="juandelacruz@gmail.com"
+                required
+              />
+            </div>
+
+            <div class="mb-5">
+              <label
+                for="contactnumber"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Your Contact Number</label
+              >
+              <input
+                type="contactnumber"
+                id="contactnumber"
+                class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-600 dark:focus:border-teal-600 dark:shadow-xs-light"
+                required
+                placeholder="09123456789"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="text-white bg-teal-600 hover:bg-teal-500 focus:ring-4 focus:outline-none focus:ring-teal-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer" class="bg-teal-900">
+      <!-- Flex Container -->
+      <div
+        class="bg-teal-900 text-white container flex flex-col p-6 py-14 mx-auto items-center gap-y-10"
+      >
+        <div
+          class="w-[90%] flex flex-col items-center justify-between gap-y-10 md:flex-row"
+        >
+          <div class="">
+            <img src="img/joydrive_logo.jpg" alt="" class="h-10" />
+          </div>
+          <ul class="flex gap-x-4">
+            <a href="https://www.facebook.com/" target="_blank" class="text-2xl"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://www.youtube.com/" target="_blank" class="text-2xl"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="text-2xl"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </ul>
+        </div>
+        <hr class="w-[90%]" />
+        <p class="w-[90%] text-center text-sm">
+          Copyright &copy; 2025 JoyDrive Inc.
+          <span class="nowrap">All Rights Reserved.</span>
+        </p>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  </body>
+</html>
